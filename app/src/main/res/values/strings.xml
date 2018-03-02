@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">cs-request-matcher</string>
+    <string name="openTabTitle">Open: ...</string>
+    <string name="closedTabTitle">Closed: ...</string>
+    <string name="empty_field">None</string>
+    <string name="repositories">Repositories</string>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/spacing1x"
+    android:paddingRight="@dimen/spacing2x"
+    android:paddingLeft="@dimen/spacing2x"
+    android:paddingBottom="@dimen/spacing1x">
+
+    <include
+        android:id="@+id/genericLayout"
+        layout="@layout/item_list_generic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivStars"
+        android:layout_width="@dimen/github_icon"
+        android:layout_height="@dimen/github_icon"
+        android:layout_marginTop="@dimen/spacing1x"
+        android:layout_marginLeft="@dimen/margin_extra_content"
+        app:srcCompat="@drawable/ic_github_star"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genericLayout"/>
+
+    <TextView
+        android:id="@+id/tvStars"
+        android:layout_width="@dimen/fill"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing0.5x"
+        android:layout_marginRight="@dimen/spacing2x"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@+id/ivStars"
+        app:layout_constraintLeft_toRightOf="@+id/ivStars"
+        app:layout_constraintRight_toLeftOf="@+id/ivMerged"/>
+
+    <ImageView
+        android:id="@+id/ivMerged"
+        android:layout_width="@dimen/spacing2x"
+        android:layout_height="@dimen/spacing2x"
+        android:layout_margin="2dp"
+        app:srcCompat="@drawable/ic_github_forked"
+        app:layout_constraintTop_toTopOf="@+id/ivStars"
+        app:layout_constraintLeft_toRightOf="@+id/tvStars"
+        app:layout_constraintRight_toLeftOf="@+id/tvMergedAt"/>
+
+    <TextView
+        android:id="@+id/tvMergedAt"
+        android:layout_width="@dimen/fill"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing0.5x"
+        android:layout_marginRight="@dimen/spacing2x"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@+id/ivStars"
+        app:layout_constraintLeft_toRightOf="@+id/ivMerged"
+        app:layout_constraintRight_toLeftOf="@+id/ivIssues"/>
+
+    <ImageView
+        android:id="@+id/ivIssues"
+        android:layout_width="@dimen/spacing2x"
+        android:layout_height="@dimen/spacing2x"
+        android:layout_margin="2dp"
+        app:srcCompat="@drawable/ic_github_issue"
+        app:layout_constraintTop_toTopOf="@+id/ivStars"
+        app:layout_constraintLeft_toRightOf="@+id/tvMergedAt"
+        app:layout_constraintRight_toLeftOf="@+id/tvIssues"/>
+
+    <TextView
+        android:id="@+id/tvIssues"
+        android:layout_width="@dimen/fill"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing0.5x"
+        android:layout_marginRight="@dimen/spacing2x"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@+id/ivStars"
+        app:layout_constraintLeft_toRightOf="@+id/ivIssues"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
